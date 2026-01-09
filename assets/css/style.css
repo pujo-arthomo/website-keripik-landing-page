@@ -235,25 +235,20 @@ p {
 }
 
 .product-carousel {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
   gap: 30px;
-  margin-top: 40px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.product-carousel::-webkit-scrollbar {
+  display: none;
 }
 
 .product-card {
-  background: #fff;
-  border-radius: 20px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card img {
-  width: 100%;
-  max-width: 200px;
-  margin: 0 auto 10px;
+  min-width: 240px;
+  flex-shrink: 0;
 }
 
 .product-card:hover {
