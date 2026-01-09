@@ -199,6 +199,36 @@ p {
   right: 20%;
 }
 
+/* chili animation */
+.chili {
+  animation: chili-fall 7s ease-in-out infinite;
+}
+
+.chili-1 {
+  animation-duration: 6s;
+}
+
+.chili-2 {
+  animation-duration: 8s;
+}
+
+@keyframes chili-fall {
+  0% {
+    transform: translateY(-40px) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(60px) rotate(10deg);
+  }
+  100% {
+    transform: translateY(140px) rotate(-10deg);
+    opacity: 0;
+  }
+}
+
 /* product */
 .products {
   background: #fafafa;
